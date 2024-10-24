@@ -16,19 +16,22 @@ function EnemyAction()
 				{
 					with (_list[| i])
 					{
-						if !place_meeting(x,y,oFartSmella) 
+						if !place_meeting(x,y,pUnit) 
 						{
 							ds_list_add(_TempList, self);
 						}
 					}
 				}
 			}
-			ds_list_shuffle(_TempList);
-			var obj = _TempList[| 0];
-			other.x = obj.x;
-			other.y = obj.y;
-			ds_list_destroy(_list);
-			ds_list_destroy(_TempList);
+			if (ds_list_size(_TempList) > 0)
+			{
+				ds_list_shuffle(_TempList);
+				var obj = _TempList[| 0];
+				other.x = obj.x;
+				other.y = obj.y;
+				ds_list_destroy(_list);
+				ds_list_destroy(_TempList);
+			}
 		}
 		instance_destroy(oHexaTester);
 	}

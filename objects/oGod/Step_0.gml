@@ -4,16 +4,28 @@ if (CurrentTurn == 0) // Player turn
 	{
 		if (collision_point(mouse_x, mouse_y, pUnit, true, false)) //Sellecting guy
 		{
-			selected_guy = unselect(selected_guy);
-			selected_guy = collision_point(mouse_x, mouse_y, pUnit, true, false);
-			with (selected_guy)
+			if (selected_guy != 0 && selected_guy.Team != (collision_point(mouse_x, mouse_y, pUnit, true, false)).Team && selected_guy.Team == CurrentTurn && (collision_point(mouse_x, mouse_y, pUnit, true, false)).InRange == true && selected_guy.HasMoved && !selected_guy.HasAttacked)
+			//Checks to see if 1) you've already selected a unit, 2) you're selecting an enemy, 3) that enemy is in range
 			{
-				Selected = true;
-				if (!HasMoved) HighlightHex(2,Movement,Range);
-				else if (!HasAttacked) HighlightHex(1,0,Range);
+				with (selected_guy)
+				{
+					HasAttacked = true;
+					Battle(self, collision_point(mouse_x, mouse_y, pUnit, true, false));
+				}
+			}
+			else
+			{
+				selected_guy = unselect(selected_guy);
+				selected_guy = collision_point(mouse_x, mouse_y, pUnit, true, false);
+				with (selected_guy)
+				{
+					Selected = true;
+					if (!HasMoved) HighlightHex(2,Movement,Range,Team);
+					else if (!HasAttacked) HighlightHex(1,0,Range,Team);
+				}
 			}
 		}
-		else if (collision_point(mouse_x, mouse_y, oHexTest, true, false) && selected_guy != 0)
+		else if (collision_point(mouse_x, mouse_y, oHexTest, true, false) && selected_guy != 0) //Moving guy to Hex
 		{
 			var obj = collision_point(mouse_x, mouse_y, oHexTest, true, false);
 			with (selected_guy)
@@ -22,29 +34,25 @@ if (CurrentTurn == 0) // Player turn
 				{
 					if ((!HasMoved)  && obj.HexSelection == sHexagon_Test_Sellect && Team == other.CurrentTurn)
 					{
-						HighlightHex(0,Movement,Range);
+						HighlightHex(0,Movement,Range,Team);
 						x = obj.x;
 						y = obj.y;
 						HasMoved = true;
 					}
-					HighlightHex(0,Movement,Range);
+					HighlightHex(0,Movement,Range,Team);
 					Selected = false;
 					other.selected_guy = 0;
 				}
 			}
 		
-	    }
-		else if (collision_point(mouse_x, mouse_y, oSmartFella, true, false) && selected_guy != 0)
-		{
-			
 		}
-		else selected_guy = unselect(selected_guy);
+		else selected_guy = unselect(selected_guy); // Unsellect guy
 	}
 }
-else if (CurrentTurn == 1)
+else if (CurrentTurn == 1) // Enemy turn
 {
 	var _list = ds_list_create();
-	var _num = collision_rectangle_list(0,0,room_width,room_height,oSmartFella,true,true,_list,true);
+	var _num = collision_rectangle_list(0,0,room_width,room_height,oEnemyUnit,true,true,_list,true);
 
 	if (_num > 0)
 	{
@@ -60,7 +68,7 @@ else if (CurrentTurn == 1)
 	nextTurn();
 }
 
-if mouse_check_button_pressed(mb_right)
+if mouse_check_button_pressed(mb_right) //next turn
 {
 	selected_guy = unselect(selected_guy);
 	nextTurn();

@@ -6,7 +6,7 @@ function unselect(SelectedGuy)
 		{
 			with (SelectedGuy)
 			{
-				HighlightHex(0,Movement,Range);
+				HighlightHex(0,Movement,Range,Team);
 				Selected = false;
 			}
 		SelectedGuy = 0;

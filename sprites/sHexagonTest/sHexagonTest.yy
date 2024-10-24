@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Hex",
+    "path":"folders/Sprites/Hex.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -11,6 +11,7 @@ function nextTurn()
 	with (pUnit)
 	{
 		HasMoved = false;
+		HasAttacked = false;
 	}
 	other.TurnCount++;
 }

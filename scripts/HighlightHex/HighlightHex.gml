@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function HighlightHex(Highlight,Movement,Range)
+function HighlightHex(Highlight,Movement,Range,Team)
 {
 	instance_create_layer(x,y,"Instances_1",oHexaTester);
 	var loops = 0;
@@ -20,20 +20,28 @@ function HighlightHex(Highlight,Movement,Range)
 						switch (Highlight)
 						{
 							case 2: 
-							if (!place_meeting(x,y,pUnit)) HexSelection = sHexagon_Test_Sellect;
+							if (!place_meeting(x,y,pUnit))
+							{
+								HexSelection = sHexagon_Test_Sellect;
+								instance_create_layer(x,y,"Instances_1",oHexaTester);
+							}
 							break;
 							case 1:
 							if (HexSelection != sHexagon_Test_Sellect)
 							{
-								HexSelection = sHexagon_Test_Damage;
+								if ((Team == 0 && !place_meeting(x,y,oPlayerUnit)) || (Team == 1 && !place_meeting(x,y,oEnemyUnit)))
+								{
+									HexSelection = sHexagon_Test_Damage;
+									instance_create_layer(x,y,"Instances_1",oHexaTester);
+								}
 							}
 							break;
 							case 0:
 							HexSelection = sHexagon_Test;
+							instance_create_layer(x,y,"Instances_1",oHexaTester);
 							break
 							
 						}
-						instance_create_layer(x,y,"Instances_1",oHexaTester);
 					}
 				}
 			}
@@ -45,4 +53,5 @@ function HighlightHex(Highlight,Movement,Range)
 		}
 	}
 	instance_destroy(oHexaTester);
+	if (Highlight != 0 && !HasMoved) collision_point(x,y,oHexTest,false,true).HexSelection = sHexagon_Test_Sellect;
 }

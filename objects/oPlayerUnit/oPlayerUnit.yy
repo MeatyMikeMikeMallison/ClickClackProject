@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oFartSmella",
+  "%Name":"oPlayerUnit",
   "eventList":[],
   "managed":true,
-  "name":"oFartSmella",
+  "name":"oPlayerUnit",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sGuy","path":"sprites/sGuy/sGuy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sGuy",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"Team","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
