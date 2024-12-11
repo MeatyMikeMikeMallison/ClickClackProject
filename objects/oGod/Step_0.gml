@@ -13,6 +13,14 @@ if (CurrentTurn == 0) // Player turn
 					Battle(self, collision_point(mouse_x, mouse_y, pUnit, true, false));
 				}
 			}
+			else if (selected_guy != 0 && collision_point(mouse_x, mouse_y, pUnit, true, false).Selected)
+			{
+				with (selected_guy)
+				{
+					HighlightHex(0,Movement,Range,Team);
+					InfoCheck = true;
+				}
+			}
 			else
 			{
 				selected_guy = unselect(selected_guy);

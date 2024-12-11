@@ -61,6 +61,7 @@
     {"id":{"name":"sHexagon_TestCollison","path":"sprites/sHexagon_TestCollison/sHexagon_TestCollison.yy",},},
     {"id":{"name":"sHexagon","path":"sprites/sHexagon/sHexagon.yy",},},
     {"id":{"name":"sHexagonTest","path":"sprites/sHexagonTest/sHexagonTest.yy",},},
+    {"id":{"name":"sInfoSquare","path":"sprites/sInfoSquare/sInfoSquare.yy",},},
     {"id":{"name":"sOtherGuy_Sellected","path":"sprites/sOtherGuy_Sellected/sOtherGuy_Sellected.yy",},},
     {"id":{"name":"sOtherGuy","path":"sprites/sOtherGuy/sOtherGuy.yy",},},
   ],
