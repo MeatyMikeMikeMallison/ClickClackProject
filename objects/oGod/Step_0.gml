@@ -66,9 +66,10 @@ else if (CurrentTurn == 1) // Enemy turn
 	{
 	    for (var i = 0; i < _num; ++i;)
 	    {
-	        with(_list[| i])
+			with(_list[| i])
 			{
-				EnemyAction();
+				show_debug_message("enemyTurn");
+				EnemyAction(self);
 			}
 	    }
 	}
@@ -81,4 +82,6 @@ if mouse_check_button_pressed(mb_right) //next turn
 	selected_guy = unselect(selected_guy);
 	nextTurn();
 }
+
 depth = -y;
+

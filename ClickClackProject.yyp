@@ -47,6 +47,7 @@
     {"id":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Battle","path":"scripts/Battle/Battle.yy",},},
+    {"id":{"name":"EndSquence","path":"scripts/EndSquence/EndSquence.yy",},},
     {"id":{"name":"EnemyAction","path":"scripts/EnemyAction/EnemyAction.yy",},},
     {"id":{"name":"HighlightHex","path":"scripts/HighlightHex/HighlightHex.yy",},},
     {"id":{"name":"nextTurn","path":"scripts/nextTurn/nextTurn.yy",},},
