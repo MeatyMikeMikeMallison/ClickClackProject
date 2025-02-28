@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oPlayerUnit",
+  "%Name":"pPlayerUnit",
   "eventList":[],
   "managed":true,
-  "name":"oPlayerUnit",
+  "name":"pPlayerUnit",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sGuy","path":"sprites/sGuy/sGuy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sGuy",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"Team","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite_Sellected","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sGuy_Sellected","path":"sprites/sGuy_Sellected/sGuy_Sellected.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sGuy_Sellected",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Parents",
+    "path":"folders/Objects/Parents.yy",
   },
   "parentObjectId":{
     "name":"pUnit",

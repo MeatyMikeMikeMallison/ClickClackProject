@@ -2,6 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function HighlightHex(Highlight,Movement,Range,Team)
 {
+	if (Highlight == 0)
+	{
+		oHexTest.HexSelection = sHexagon_Test;
+		exit;
+	}
 	instance_create_layer(x,y,"Instances_1",oHexaTester);
 	var loops = 0;
 	repeat (Movement+Range)
@@ -29,7 +34,7 @@ function HighlightHex(Highlight,Movement,Range,Team)
 							case 1:
 							if (HexSelection != sHexagon_Test_Sellect)
 							{
-								if ((Team == 0 && !place_meeting(x,y,oPlayerUnit)) || (Team == 1 && !place_meeting(x,y,oEnemyUnit)))
+								if ((Team == 0 && !place_meeting(x,y,pPlayerUnit)) || (Team == 1 && !place_meeting(x,y,pEnemyUnit)))
 								{
 									HexSelection = sHexagon_Test_Damage;
 									instance_create_layer(x,y,"Instances_1",oHexaTester);

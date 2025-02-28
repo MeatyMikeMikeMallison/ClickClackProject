@@ -60,7 +60,7 @@ if (CurrentTurn == 0) // Player turn
 else if (CurrentTurn == 1) // Enemy turn
 {
 	var _list = ds_list_create();
-	var _num = collision_rectangle_list(0,0,room_width,room_height,oEnemyUnit,true,true,_list,true);
+	var _num = collision_rectangle_list(0,0,room_width,room_height,pEnemyUnit,true,true,_list,true);
 
 	if (_num > 0)
 	{
@@ -80,6 +80,17 @@ else if (CurrentTurn == 1) // Enemy turn
 if mouse_check_button_pressed(mb_right) //next turn
 {
 	selected_guy = unselect(selected_guy);
+	switch (BattleCondition)
+	{
+		case BattleStatus.Victory:
+			room_goto_next();
+			break;
+		case BattleStatus.Defeat:
+			room_restart();
+			break;
+		case BattleStatus.Going:
+			break;
+	}
 	nextTurn();
 }
 

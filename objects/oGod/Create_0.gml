@@ -9,3 +9,12 @@ enum TurnOrder
 }
 
 CurrentTurn = TurnOrder.Player;
+
+enum BattleStatus
+{
+	Victory,
+	Defeat,
+	Going
+}
+
+BattleCondition = BattleStatus.Going;

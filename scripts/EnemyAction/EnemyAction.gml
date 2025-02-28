@@ -20,7 +20,7 @@ function EnemyAction(Me)
 				{
 					with (_list[| i])
 					{
-						if place_meeting(x,y,oPlayerUnit)
+						if place_meeting(x,y,pPlayerUnit)
 						{
 							ds_list_add(_TargetPlayerList, self);
 							
@@ -69,7 +69,7 @@ function EnemyAction(Me)
 			Fight = true;
 			with (Target)
 			{
-				Target = collision_point(Target.x,Target.y,oPlayerUnit,false,true);
+				Target = collision_point(Target.x,Target.y,pPlayerUnit,false,true);
 			}
 		}
 	}

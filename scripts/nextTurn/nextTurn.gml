@@ -13,5 +13,11 @@ function nextTurn()
 		HasMoved = false;
 		HasAttacked = false;
 	}
+	
+	if (!instance_exists(pPlayerUnit)) BattleCondition = BattleStatus.Defeat;
+	else if (!instance_exists(pEnemyUnit)) BattleCondition = BattleStatus.Victory;
+	
 	other.TurnCount++;
+	
+	
 }
