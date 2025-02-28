@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "$GMMainOptions":"v1",
   "%Name":"Main",
   "name":"Main",
@@ -22,6 +23,8 @@
   "resourceType":"GMMainOptions",
   "resourceVersion":"2.0",
 =======
+=======
+>>>>>>> parent of 8e1e5ce (Revert "Levels Adding")
   "resourceType": "GMMainOptions",
   "resourceVersion": "1.4",
   "name": "Main",
@@ -40,5 +43,8 @@
   "option_template_icon": "${base_options_dir}/main/template_icon.png",
   "option_template_image": "${base_options_dir}/main/template_image.png",
   "option_window_colour": 255,
+<<<<<<< HEAD
+>>>>>>> parent of 8e1e5ce (Revert "Levels Adding")
+=======
 >>>>>>> parent of 8e1e5ce (Revert "Levels Adding")
 }
