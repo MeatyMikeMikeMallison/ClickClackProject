@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite_Sellected","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sGuy_Sellected","path":"sprites/sGuy_Sellected/sGuy_Sellected.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sGuy_Sellected",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"UnitTypes",
+    "path":"folders/Objects/UnitTypes.yy",
   },
   "parentObjectId":{
     "name":"pUnit",
