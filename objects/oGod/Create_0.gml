@@ -9,12 +9,3 @@ enum TurnOrder
 }
 
 CurrentTurn = TurnOrder.Player;
-
-enum Conclusion
-{
-	none,
-	victory,
-	defeat
-}
-
-TheBattleIs = Conclusion.none

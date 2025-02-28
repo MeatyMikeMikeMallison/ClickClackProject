@@ -1,5 +1,4 @@
 {
-<<<<<<< Updated upstream:objects/oEnemyUnit/oEnemyUnit.yy
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "oEnemyUnit",
@@ -13,21 +12,6 @@
   "parent": {
     "name": "Objects",
     "path": "folders/Objects.yy",
-=======
-  "$GMObject":"",
-  "%Name":"pEnemyUnitBase",
-  "eventList":[],
-  "managed":true,
-  "name":"pEnemyUnitBase",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sOtherGuy","path":"sprites/sOtherGuy/sOtherGuy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sOtherGuy",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite_Sellected","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sOtherGuy_Sellected","path":"sprites/sOtherGuy_Sellected/sOtherGuy_Sellected.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sOtherGuy_Sellected",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"Team","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
-  ],
-  "parent":{
-    "name":"Parents",
-    "path":"folders/Objects/Parents.yy",
->>>>>>> Stashed changes:objects/pEnemyUnitBase/pEnemyUnitBase.yy
   },
   "parentObjectId": {
     "name": "pUnit",

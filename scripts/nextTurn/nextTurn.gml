@@ -14,7 +14,4 @@ function nextTurn()
 		HasAttacked = false;
 	}
 	other.TurnCount++;
-	
-	if (!instance_exists(pEnemyUnitBase)) TheBattleIs = Conclusion.victory;
-	if (!instance_exists(pPlayerUnitBase)) TheBattleIs = Conclusion.defeat;
 }
