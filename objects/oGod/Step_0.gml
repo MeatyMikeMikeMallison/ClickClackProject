@@ -60,7 +60,7 @@ if (CurrentTurn == 0) // Player turn
 else if (CurrentTurn == 1) // Enemy turn
 {
 	var _list = ds_list_create();
-	var _num = collision_rectangle_list(0,0,room_width,room_height,oEnemyUnit,true,true,_list,true);
+	var _num = collision_rectangle_list(0,0,room_width,room_height,pEnemyUnit,true,true,_list,true);
 
 	if (_num > 0)
 	{

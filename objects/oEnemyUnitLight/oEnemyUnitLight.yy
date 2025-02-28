@@ -6,7 +6,6 @@
   "name":"oEnemyUnitLight",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sOtherGuy_light","path":"sprites/sOtherGuy_light/sOtherGuy_light.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sOtherGuy_light",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"Team","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite_Sellected","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sOtherGuy_Sellected_light","path":"sprites/sOtherGuy_Sellected_light/sOtherGuy_Sellected_light.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sOtherGuy_Sellected_light",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"Movement","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"6",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"Range","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
@@ -20,8 +19,8 @@
     "path":"folders/Objects/UnitTypes.yy",
   },
   "parentObjectId":{
-    "name":"oEnemyUnit",
-    "path":"objects/oEnemyUnit/oEnemyUnit.yy",
+    "name":"pEnemyUnit",
+    "path":"objects/pEnemyUnit/pEnemyUnit.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

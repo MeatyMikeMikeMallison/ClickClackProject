@@ -3,6 +3,7 @@
 function HighlightHex(Highlight,Movement,Range,Team)
 {
 	instance_create_layer(x,y,"Instances_1",oHexaTester);
+	show_debug_message("Help?");
 	var loops = 0;
 	repeat (Movement+Range)
 	{
@@ -29,7 +30,7 @@ function HighlightHex(Highlight,Movement,Range,Team)
 							case 1:
 							if (HexSelection != sHexagon_Test_Sellect)
 							{
-								if ((Team == 0 && !place_meeting(x,y,oPlayerUnit)) || (Team == 1 && !place_meeting(x,y,oEnemyUnit)))
+								if ((Team == 0 && !place_meeting(x,y,oPlayerUnitMedium)) || (Team == 1 && !place_meeting(x,y,oEnemyUnitMedium)))
 								{
 									HexSelection = sHexagon_Test_Damage;
 									instance_create_layer(x,y,"Instances_1",oHexaTester);

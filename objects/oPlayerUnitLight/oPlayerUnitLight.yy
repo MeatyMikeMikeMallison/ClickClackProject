@@ -20,8 +20,8 @@
     "path":"folders/Objects/UnitTypes.yy",
   },
   "parentObjectId":{
-    "name":"oPlayerUnit",
-    "path":"objects/oPlayerUnit/oPlayerUnit.yy",
+    "name":"pPlayerUnit",
+    "path":"objects/pPlayerUnit/pPlayerUnit.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
