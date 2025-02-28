@@ -2,11 +2,18 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function HighlightHex(Highlight,Movement,Range,Team)
 {
+	if (Highlight = 0)
+	{
+		oHexTest.HexSelection = sHexagon_Test;
+		exit;
+	}
+	
 	instance_create_layer(x,y,"Instances_1",oHexaTester);
 	var loops = 0;
 	repeat (Movement+Range)
 	{
 		loops++;
+		show_debug_message(string(loops));
 		with(oHexaTester)
 		{
 			var _list = ds_list_create();
@@ -29,7 +36,7 @@ function HighlightHex(Highlight,Movement,Range,Team)
 							case 1:
 							if (HexSelection != sHexagon_Test_Sellect)
 							{
-								if ((Team == 0 && !place_meeting(x,y,oPlayerUnit)) || (Team == 1 && !place_meeting(x,y,oEnemyUnit)))
+								if ((Team == 0 && !place_meeting(x,y,pPlayerUnitBase)) || (Team == 1 && !place_meeting(x,y,pEnemyUnitBase)))
 								{
 									HexSelection = sHexagon_Test_Damage;
 									instance_create_layer(x,y,"Instances_1",oHexaTester);
@@ -39,12 +46,13 @@ function HighlightHex(Highlight,Movement,Range,Team)
 							case 0:
 							HexSelection = sHexagon_Test;
 							instance_create_layer(x,y,"Instances_1",oHexaTester);
-							break
+							break;
 							
 						}
 					}
 				}
 			}
+			show_debug_message(string(ds_list_size(_list)));
 			ds_list_destroy(_list);
 		}
 		if (Highlight == 2)

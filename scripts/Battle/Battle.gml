@@ -7,15 +7,21 @@ function Battle(Attacker,Defender)
 
 	with(Defender)
 	{
-		Health = Health - ((Attacker.Attack * 2)/Defense);
+		Health = Health - (Attacker.Attack - Defense);
 		if (Health > 0)
 		{
-			with (Attacker)
+			with (instance_create_layer(x,y,"Instances_1",oHexaTester))
 			{
-				Health = Health - ((Defender.Attack * 2)/Defense);
-				if (Health < 1)
+				if (instance_place(x,y,Attacker))
 				{
-					instance_destroy();
+					with (Attacker)
+					{
+						Health = Health - (Defender.Attack - Defense);
+						if (Health < 1)
+						{
+							instance_destroy();
+						}
+					}
 				}
 			}
 		}
@@ -23,6 +29,6 @@ function Battle(Attacker,Defender)
 	}
 	
 	//animation
-	oGod.cutscene = layer_sequence_create("AssetsBattle",room_width/2,room_height/2,Sequence1);
+	//oGod.cutscene = layer_sequence_create("AssetsBattle",room_width/2,room_height/2,Sequence1);
 	show_debug_message("Done 1");
 }

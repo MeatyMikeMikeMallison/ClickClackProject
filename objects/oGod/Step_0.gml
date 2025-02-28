@@ -60,7 +60,7 @@ if (CurrentTurn == 0) // Player turn
 else if (CurrentTurn == 1) // Enemy turn
 {
 	var _list = ds_list_create();
-	var _num = collision_rectangle_list(0,0,room_width,room_height,oEnemyUnit,true,true,_list,true);
+	var _num = collision_rectangle_list(0,0,room_width,room_height,pEnemyUnitBase,true,true,_list,true);
 
 	if (_num > 0)
 	{
@@ -80,7 +80,15 @@ else if (CurrentTurn == 1) // Enemy turn
 if mouse_check_button_pressed(mb_right) //next turn
 {
 	selected_guy = unselect(selected_guy);
-	nextTurn();
+	if (TheBattleIs == Conclusion.victory)
+	{
+		room_goto(Battle1);
+	}
+	else if (TheBattleIs == Conclusion.defeat)
+	{
+		room_restart();
+	}
+	else nextTurn();
 }
 
 depth = -y;
