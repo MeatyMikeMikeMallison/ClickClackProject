@@ -66,7 +66,6 @@ function EnemyAction(Me)
 		instance_destroy(oHexaTester);
 		if (ds_list_size(_TargetHexList) > 0)
 		{
-			show_debug_message("FoundFight")
 			Fight = true;
 			with (Target)
 			{

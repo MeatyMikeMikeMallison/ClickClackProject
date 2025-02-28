@@ -66,11 +66,11 @@ else if (CurrentTurn == 1) // Enemy turn
 	{
 	    for (var i = 0; i < _num; ++i;)
 	    {
-				with(_list[| i])
-				{
-					show_debug_message("EnemyTurn"+string(i));
-					EnemyAction(self);
-				}
+			with(_list[| i])
+			{
+				show_debug_message("enemyTurn");
+				EnemyAction(self);
+			}
 	    }
 	}
 	ds_list_destroy(_list);
