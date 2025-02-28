@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"oEnemyUnitMedium",
+  "%Name":"oEnemyUnit",
   "eventList":[],
   "managed":true,
-  "name":"oEnemyUnitMedium",
+  "name":"oEnemyUnit",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sOtherGuy","path":"sprites/sOtherGuy/sOtherGuy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sOtherGuy",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite_Sellected","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sOtherGuy_Sellected","path":"sprites/sOtherGuy_Sellected/sOtherGuy_Sellected.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sOtherGuy_Sellected",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"Team","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{
     "name":"UnitTypes",
     "path":"folders/Objects/UnitTypes.yy",
   },
   "parentObjectId":{
-    "name":"pEnemyUnit",
-    "path":"objects/pEnemyUnit/pEnemyUnit.yy",
+    "name":"pUnit",
+    "path":"objects/pUnit/pUnit.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
