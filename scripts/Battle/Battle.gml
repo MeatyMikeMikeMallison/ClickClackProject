@@ -7,12 +7,12 @@ function Battle(Attacker,Defender)
 
 	with(Defender)
 	{
-		Health = Health - ((Attacker.Attack * 2)/Defense);
+		Health = Health - (Attacker.Attack - Defense);
 		if (Health > 0)
 		{
 			with (Attacker)
 			{
-				Health = Health - ((Defender.Attack * 2)/Defense);
+				Health = Health - (Defender.Attack - Defense);
 				if (Health < 1)
 				{
 					instance_destroy();
