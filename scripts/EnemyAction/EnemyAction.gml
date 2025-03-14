@@ -7,31 +7,10 @@ function EnemyAction(Me)
 	var _TargetFinalList = ds_list_create();// Possible Hexs to move to attack
 	var _TargetHexList = ds_list_create(); // Hypothetical Hexs to move to attack
 	var _TargetPlayerList = ds_list_create(); //Hexs that has player on it
-	instance_create_layer(x,y,"Instances_1",oHexaTester); //Creates the HexTester which does the highlight stuff
-	repeat (Movement + Range)
-	{
-		with(oHexaTester)
-		{
-			var _list = ds_list_create(); //Base list of Hexs
-			var _num = instance_place_list(x,y,oHexTest,_list,true);
-			if (_num > 0)
-			{
-				for (var i = 0; i < _num; ++i;)
-				{
-					with (_list[| i])
-					{
-						if place_meeting(x,y,pPlayerUnit)
-						{
-							ds_list_add(_TargetPlayerList, self);
-							
-						}
-						instance_create_layer(x,y,"Instances_1",oHexaTester);
-					}
-				}
-			}
-			ds_list_destroy(_list);
-		}
-	}
+
+	FindPlayerHexes(Me, _TargetPlayerList);
+	//show_debug_message(ds_list_size(_TargetPlayerList));
+	
 	if (ds_list_size(_TargetPlayerList) > 0)
 	{
 		instance_destroy(oHexaTester);
@@ -153,4 +132,43 @@ function EnemyAction(Me)
 	ds_list_destroy(_TargetHexList);
 	ds_list_destroy(_TargetPlayerList);
 	ds_list_destroy(_TargetFinalList);
+}
+
+function FindPlayerHexes(Me, targetPlayerList)
+{
+	instance_create_layer(x,y,"Instances_1",oHexaTester); //Creates the HexTester which does the highlight stuff
+	
+	repeat (Movement + Range)
+	{
+		with(oHexaTester)
+		{
+            var _list = ds_list_create(); //Base list of Hexs
+			
+			var _num = instance_place_list(x,y,oHexTest,_list,true);
+			if (_num > 0)
+			{
+				for (var i = 0; i < _num; ++i;)
+				{
+					var hexInstance = _list[| i];
+					
+					with (hexInstance)
+					{
+						if place_meeting(x,y,pPlayerUnit)
+						{
+							ds_list_add(targetPlayerList, self);
+							
+						}
+						//Check to see a tester already exists in this location
+						if (!instance_place(hexInstance.x, hexInstance.y, oHexaTester))
+						{
+							instance_create_layer(hexInstance.x,hexInstance.y,"Instances_1",oHexaTester);
+						}
+					}
+
+				}
+			}
+			//show_debug_message("Hex Instances: " + string (instance_number(oHexaTester)));
+			ds_list_destroy(_list);
+		}
+	}
 }
