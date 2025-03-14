@@ -34,11 +34,11 @@ function HighlightHex(Highlight,Movement,Range,Team)
 							case 1:
 							if (HexSelection != sHexagon_Test_Sellect)
 							{
-								if ((Team == 0 && !place_meeting(x,y,pPlayerUnit)) || (Team == 1 && !place_meeting(x,y,pEnemyUnit)))
-								{
+								//if ((Team == 0 && !place_meeting(x,y,pPlayerUnit)) || (Team == 1 && !place_meeting(x,y,pEnemyUnit)))
+								//{
 									HexSelection = sHexagon_Test_Damage;
 									instance_create_layer(x,y,"Instances_1",oHexaTester);
-								}
+								//}
 							}
 							break;
 							case 0:
