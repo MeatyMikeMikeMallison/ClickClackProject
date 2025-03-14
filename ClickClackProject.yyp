@@ -98,8 +98,8 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"roomId":{"name":"Battle1","path":"rooms/Battle1/Battle1.yy",},},
-    {"roomId":{"name":"DebugBattle","path":"rooms/DebugBattle/DebugBattle.yy",},},
     {"roomId":{"name":"EndOfAlpha","path":"rooms/EndOfAlpha/EndOfAlpha.yy",},},
+    {"roomId":{"name":"DebugBattle","path":"rooms/DebugBattle/DebugBattle.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

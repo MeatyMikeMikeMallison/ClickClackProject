@@ -7,16 +7,25 @@ function Battle(Attacker,Defender)
 
 	with(Defender)
 	{
-		Health = Health - ((Attacker.Attack * 2)/Defense);
+		Health = Health - (Attacker.Attack - Defense);
 		if (Health > 0)
 		{
-			with (Attacker)
+			with (instance_create_layer(x,y,"Instances_1",oHexaTester))
 			{
-				Health = Health - ((Defender.Attack * 2)/Defense);
-				if (Health < 1)
+				image_xscale = Defender.Range;
+				image_yscale = Defender.Range;
+				if (place_meeting(x,y,Attacker))
 				{
-					instance_destroy();
+					with (Attacker)
+					{
+						Health = Health - (Defender.Attack - Defense);
+						if (Health < 1)
+						{
+							instance_destroy();
+						}
+					}
 				}
+				instance_destroy();
 			}
 		}
 		else instance_destroy();
