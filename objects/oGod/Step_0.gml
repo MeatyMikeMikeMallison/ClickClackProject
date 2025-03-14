@@ -69,7 +69,7 @@ else if (CurrentTurn == 1) // Enemy turn
 			with(_list[| i])
 			{
 				show_debug_message("enemyTurn");
-				TestEnemyAction(self);
+				EnemyAction(self);
 			}
 	    }
 	}
