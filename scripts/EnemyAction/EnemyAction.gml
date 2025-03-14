@@ -158,14 +158,26 @@ function ComputeFinalMovementHexes (Me, targetHexList, targetFinalList)
 					var _num = instance_place_list(x,y,oHexTest,_list,true);
 					if (_num > 0)
 					{
-						for (var j = 0; j < _num; ++j;)
+						for (var j = 0; j < _num; ++j)
 						{
-							with (_list[| j])
+							var hexInstance = _list[| j];
+							
+							with (hexInstance)
 							{
-								if place_meeting(x,y,Me) ds_list_add(targetFinalList, targetHexList[| i]);
-								else if !place_meeting(x,y,pUnit) instance_create_layer(x,y,"Instances_1",oHexaTester);
+								if (place_meeting(x,y,Me))
+								{
+									ds_list_add(targetFinalList, targetHexList[| i]);
+								}
+									
+								else if (!place_meeting(x,y,pUnit) and !instance_place(x,y,oHexaTester))
+								{
+									instance_create_layer(x,y,"Instances_1",oHexaTester);
+								}
+									
+								
 							}
 						}
+						//show_debug_message("Hex Instances: " + string (instance_number(oHexaTester)));
 					}
 					ds_list_destroy(_list);
 				}
