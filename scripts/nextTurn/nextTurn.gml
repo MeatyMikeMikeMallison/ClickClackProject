@@ -17,7 +17,8 @@ function nextTurn()
 	if (!instance_exists(pPlayerUnit)) BattleCondition = BattleStatus.Defeat;
 	else if (!instance_exists(pEnemyUnit)) BattleCondition = BattleStatus.Victory;
 	
+	Enemy_Number_Max = instance_number(pEnemyUnit);
+	Enemy_Number = Enemy_Number_Max;
 	other.TurnCount++;
-	
-	
+	show_debug_message(Enemy_Number_Max);
 }

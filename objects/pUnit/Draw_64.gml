@@ -3,12 +3,12 @@
 
 if (InfoCheck)
 {
-	draw_sprite(sInfoSquare,0,x,y);
-	draw_text(x-100,y,"Max Hp:" + string(MaxHealth));
-	draw_text(x+150,y,"Hp:" + string(Health));
-	draw_text(x-100,y+50,"Speed:" + string(Movement));
-	draw_text(x+150,y+50,"Range:" + string(Range));
-	draw_text(x-100,y+100,"Attack:" + string(Attack));
-	draw_text(x+150,y+100,"Armor:" + string(Defense));
-	draw_text(x,y-100,"Unit Type:" + UnitType);
+	draw_sprite(sInfoSquare,0,0,0);
+	draw_text(InfoBase-50,InfoBase,"Max Hp:" + string(MaxHealth));
+	draw_text(InfoBase+100,InfoBase,"Hp:" + string(Health));
+	draw_text(InfoBase-50,InfoBase+50,"Speed:" + string(Movement));
+	draw_text(InfoBase+100,InfoBase+50,"Range:" + string(Range));
+	draw_text(InfoBase-50,InfoBase+100,"Attack:" + string(Attack));
+	draw_text(InfoBase+100,InfoBase+100,"Armor:" + string(Defense));
+	draw_text(InfoBase,InfoBase-50,"Unit Type:" + UnitType);
 }

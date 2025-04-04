@@ -42,6 +42,7 @@
   "name":"ClickClackProject",
   "resources":[
     {"id":{"name":"fnt_extras","path":"fonts/fnt_extras/fnt_extras.yy",},},
+    {"id":{"name":"BattleActor","path":"objects/BattleActor/BattleActor.yy",},},
     {"id":{"name":"obj_credits","path":"objects/obj_credits/obj_credits.yy",},},
     {"id":{"name":"obj_creditText","path":"objects/obj_creditText/obj_creditText.yy",},},
     {"id":{"name":"obj_play","path":"objects/obj_play/obj_play.yy",},},
@@ -69,6 +70,7 @@
     {"id":{"name":"nextTurn","path":"scripts/nextTurn/nextTurn.yy",},},
     {"id":{"name":"unselect","path":"scripts/unselect/unselect.yy",},},
     {"id":{"name":"Sequence1","path":"sequences/Sequence1/Sequence1.yy",},},
+    {"id":{"name":"BattleActorTest","path":"sprites/BattleActorTest/BattleActorTest.yy",},},
     {"id":{"name":"sBackgroundBattle","path":"sprites/sBackgroundBattle/sBackgroundBattle.yy",},},
     {"id":{"name":"sDefeat","path":"sprites/sDefeat/sDefeat.yy",},},
     {"id":{"name":"sENDOFALPHA","path":"sprites/sENDOFALPHA/sENDOFALPHA.yy",},},

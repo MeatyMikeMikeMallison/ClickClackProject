@@ -1,4 +1,4 @@
-depth = -y-5;
+depth = 200-y-5;
 
 if (Selected) sprite_index = BaseSprite_Sellected;
 else sprite_index = BaseSprite;
