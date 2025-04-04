@@ -1,6 +1,6 @@
 if (CurrentTurn == 0) // Player turn
 {
-	if mouse_check_button_pressed(mb_left) 
+	if (mouse_check_button_pressed(mb_left) && !PlayerBattle)
 	{
 		if (collision_point(mouse_x, mouse_y, pUnit, true, false)) //Sellecting guy
 		{
@@ -10,15 +10,8 @@ if (CurrentTurn == 0) // Player turn
 				with (selected_guy)
 				{
 					HasAttacked = true;
+					oGod.PlayerBattle = true;
 					Battle(self, collision_point(mouse_x, mouse_y, pUnit, true, false));
-				}
-			}
-			else if (selected_guy != 0 && collision_point(mouse_x, mouse_y, pUnit, true, false).Selected)
-			{
-				with (selected_guy)
-				{
-					HighlightHex(0,Movement,Range,Team);
-					InfoCheck = true;
 				}
 			}
 			else
@@ -27,6 +20,7 @@ if (CurrentTurn == 0) // Player turn
 				selected_guy = collision_point(mouse_x, mouse_y, pUnit, true, false);
 				with (selected_guy)
 				{
+					InfoCheck = true
 					Selected = true;
 					if (!HasMoved) HighlightHex(2,Movement,Range,Team);
 					else if (!HasAttacked) HighlightHex(1,0,Range,Team);
@@ -56,43 +50,57 @@ if (CurrentTurn == 0) // Player turn
 		}
 		else selected_guy = unselect(selected_guy); // Unsellect guy
 	}
+	
+	if mouse_check_button_pressed(mb_right) //next turn
+	{
+		selected_guy = unselect(selected_guy);
+		switch (BattleCondition)
+		{
+			case BattleStatus.Victory:
+				room_goto_next();
+				break;
+			case BattleStatus.Defeat:
+				room_restart();
+				break;
+			case BattleStatus.Going:
+				break;
+		}
+		nextTurn();
+	}
 }
 else if (CurrentTurn == 1) // Enemy turn
 {
-	var _list = ds_list_create();
-	var _num = collision_rectangle_list(0,0,room_width,room_height,pEnemyUnit,true,true,_list,true);
-
-	if (_num > 0)
+	if (Enemy_Move)
 	{
-	    for (var i = 0; i < _num; ++i;)
-	    {
-			with(_list[| i])
+		if (!Enemy_Number == 0)
+		{
+			var _list = ds_list_create();
+			var _num = collision_rectangle_list(0,0,room_width,room_height,pEnemyUnit,true,true,_list,true);
+			if (_num > 0)
 			{
-				show_debug_message("enemyTurn");
-				EnemyAction(self);
+				ds_list_shuffle(_list);
+				if (!_list[| 0].HasMoved)
+				{
+					Enemy_Move = false;
+					Enemy_Number--;
+					with(_list[| 0])
+					{
+						show_debug_message("enemyTurn");
+						EnemyAction(self);
+						HasMoved = true;
+					}
+				}
 			}
-	    }
+			ds_list_destroy(_list);
+		}
+		else
+		{
+			Enemy_Number = Enemy_Number_Max;
+			nextTurn();
+		}
 	}
-	ds_list_destroy(_list);
-	nextTurn();
 }
 
-if mouse_check_button_pressed(mb_right) //next turn
-{
-	selected_guy = unselect(selected_guy);
-	switch (BattleCondition)
-	{
-		case BattleStatus.Victory:
-			room_goto_next();
-			break;
-		case BattleStatus.Defeat:
-			room_restart();
-			break;
-		case BattleStatus.Going:
-			break;
-	}
-	nextTurn();
-}
 
 depth = -y;
 

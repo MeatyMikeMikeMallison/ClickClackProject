@@ -7,3 +7,5 @@ InfoCheck = false;
 sprite_index = BaseSprite;
 
 Health = MaxHealth;
+
+InfoBase = 100;
