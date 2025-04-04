@@ -54,7 +54,6 @@ function EnemyAction(Me)
 	//If fighting isn't possible then retreat
 	else if (!Fight)
 	{
-		
 		Retreat(Me);
 		with (oGod) alarm_set(0,10);
 	}

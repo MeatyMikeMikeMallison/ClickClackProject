@@ -41,6 +41,7 @@ if (CurrentTurn == 0) // Player turn
 						y = obj.y;
 						HasMoved = true;
 					}
+					
 					other.selected_guy = unselect(selected_guy);
 				}
 			}

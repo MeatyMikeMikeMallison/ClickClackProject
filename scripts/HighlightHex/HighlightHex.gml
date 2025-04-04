@@ -5,7 +5,11 @@ function HighlightHex(Highlight,Movement,Range,Team)
 	show_debug_message("HexGate");
 	if (Highlight == 0)
 	{
-		with (oHexTest) HexSelection = sHexagon_Test;
+		with (oHexTest)
+		{
+			HexSelection = sHexagon_Test;
+			HexHighlightSellect = false;
+		}
 		show_debug_message("breakout");
 		exit;
 	}
@@ -24,27 +28,30 @@ function HighlightHex(Highlight,Movement,Range,Team)
 				{
 					with(_list[| i])
 					{
-						switch (Highlight)
+						if (!HexHighlightSellect)
 						{
-							case 2: 
-								if (!place_meeting(x,y,pUnit))
-								{
-									HexSelection = sHexagon_Test_Sellect;
+							switch (Highlight)
+							{
+								case 2: 
+									if (!place_meeting(x,y,pUnit))
+									{
+										HexSelection = sHexagon_Test_Sellect;
+										instance_create_layer(x,y,"Instances_1",oHexaTester);
+									}
+								break;
+								case 1:
+									if (HexSelection != sHexagon_Test_Sellect)
+									{
+										HexSelection = sHexagon_Test_Damage;
+										instance_create_layer(x,y,"Instances_1",oHexaTester);
+									}
+								break;
+								case 0:
+									HexSelection = sHexagon_Test;
 									instance_create_layer(x,y,"Instances_1",oHexaTester);
-								}
-							break;
-							case 1:
-								if (HexSelection != sHexagon_Test_Sellect)
-								{
-									HexSelection = sHexagon_Test_Damage;
-									instance_create_layer(x,y,"Instances_1",oHexaTester);
-								}
-							break;
-							case 0:
-								HexSelection = sHexagon_Test;
-								instance_create_layer(x,y,"Instances_1",oHexaTester);
-							break;
-							
+								break;
+							}
+							HexHighlightSellect = true;
 						}
 					}
 				}
@@ -56,6 +63,7 @@ function HighlightHex(Highlight,Movement,Range,Team)
 			if (loops == Movement) Highlight = 1;
 		}
 	}
+	with (oHexTest) HexHighlightSellect = false;
 	instance_destroy(oHexaTester);
 	if (Highlight != 0 && !HasMoved) collision_point(x,y,oHexTest,false,true).HexSelection = sHexagon_Test_Sellect;
 }
