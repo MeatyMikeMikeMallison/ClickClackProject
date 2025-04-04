@@ -4,7 +4,7 @@ if (CurrentTurn == 0) // Player turn
 	{
 		if (collision_point(mouse_x, mouse_y, pUnit, true, false)) //Sellecting guy
 		{
-			if (selected_guy != 0 && selected_guy.Team != (collision_point(mouse_x, mouse_y, pUnit, true, false)).Team && selected_guy.Team == CurrentTurn && (collision_point(mouse_x, mouse_y, pUnit, true, false)).InRange == true && selected_guy.HasMoved && !selected_guy.HasAttacked)
+			if (selected_guy != noone && selected_guy.Team != (collision_point(mouse_x, mouse_y, pUnit, true, false)).Team && selected_guy.Team == CurrentTurn && (collision_point(mouse_x, mouse_y, pUnit, true, false)).InRange == true && selected_guy.HasMoved && !selected_guy.HasAttacked)
 			//Checks to see if 1) you've already selected a unit, 2) you're selecting an enemy, 3) that enemy is in range
 			{
 				with (selected_guy)
@@ -27,7 +27,7 @@ if (CurrentTurn == 0) // Player turn
 				}
 			}
 		}
-		else if (collision_point(mouse_x, mouse_y, oHexTest, true, false) && selected_guy != 0) //Moving guy to Hex
+		else if (collision_point(mouse_x, mouse_y, oHexTest, true, false) && selected_guy != noone) //Moving guy to Hex
 		{
 			var obj = collision_point(mouse_x, mouse_y, oHexTest, true, false);
 			with (selected_guy)
@@ -41,9 +41,7 @@ if (CurrentTurn == 0) // Player turn
 						y = obj.y;
 						HasMoved = true;
 					}
-					HighlightHex(0,Movement,Range,Team);
-					Selected = false;
-					other.selected_guy = 0;
+					other.selected_guy = unselect(selected_guy);
 				}
 			}
 		

@@ -2,16 +2,15 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function unselect(SelectedGuy)
 {
-	if (SelectedGuy != 0)
+	if (SelectedGuy != noone)
 		{
 			with (SelectedGuy)
 			{
 				HighlightHex(0,Movement,Range,Team);
 				InfoCheck = false;
 				Selected = false;
-				
 			}
-		SelectedGuy = 0;
+		SelectedGuy = noone;
 		}
 	return SelectedGuy;
 }

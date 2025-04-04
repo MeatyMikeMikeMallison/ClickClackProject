@@ -12,6 +12,7 @@ function nextTurn()
 	{
 		HasMoved = false;
 		HasAttacked = false;
+		Selected = false;
 	}
 	
 	if (!instance_exists(pPlayerUnit)) BattleCondition = BattleStatus.Defeat;

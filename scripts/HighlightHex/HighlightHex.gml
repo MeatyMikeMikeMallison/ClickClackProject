@@ -2,9 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function HighlightHex(Highlight,Movement,Range,Team)
 {
+	show_debug_message("HexGate");
 	if (Highlight == 0)
 	{
-		oHexTest.HexSelection = sHexagon_Test;
+		with (oHexTest) HexSelection = sHexagon_Test;
+		show_debug_message("breakout");
 		exit;
 	}
 	instance_create_layer(x,y,"Instances_1",oHexaTester);
@@ -25,26 +27,23 @@ function HighlightHex(Highlight,Movement,Range,Team)
 						switch (Highlight)
 						{
 							case 2: 
-							if (!place_meeting(x,y,pUnit))
-							{
-								HexSelection = sHexagon_Test_Sellect;
-								instance_create_layer(x,y,"Instances_1",oHexaTester);
-							}
+								if (!place_meeting(x,y,pUnit))
+								{
+									HexSelection = sHexagon_Test_Sellect;
+									instance_create_layer(x,y,"Instances_1",oHexaTester);
+								}
 							break;
 							case 1:
-							if (HexSelection != sHexagon_Test_Sellect)
-							{
-								//if ((Team == 0 && !place_meeting(x,y,pPlayerUnit)) || (Team == 1 && !place_meeting(x,y,pEnemyUnit)))
-								//{
+								if (HexSelection != sHexagon_Test_Sellect)
+								{
 									HexSelection = sHexagon_Test_Damage;
 									instance_create_layer(x,y,"Instances_1",oHexaTester);
-								//}
-							}
+								}
 							break;
 							case 0:
-							HexSelection = sHexagon_Test;
-							instance_create_layer(x,y,"Instances_1",oHexaTester);
-							break
+								HexSelection = sHexagon_Test;
+								instance_create_layer(x,y,"Instances_1",oHexaTester);
+							break;
 							
 						}
 					}

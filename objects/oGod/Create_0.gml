@@ -1,4 +1,4 @@
-selected_guy = 0;
+selected_guy = noone;
 cutscene = 0;
 PlayerBattle = false;
 
@@ -25,4 +25,5 @@ Enemy_Number_Max = instance_number(pEnemyUnit);
 Enemy_Number = Enemy_Number_Max;
 Enemy_Move = true;
 
+show_debug_log(true);
 show_debug_message(Enemy_Number_Max);
