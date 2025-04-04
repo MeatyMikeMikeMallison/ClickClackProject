@@ -51,7 +51,7 @@ if (CurrentTurn == 0) // Player turn
 		else selected_guy = unselect(selected_guy); // Unsellect guy
 	}
 	
-	if mouse_check_button_pressed(mb_right) //next turn
+	if (mouse_check_button_pressed(mb_right) && !PlayerBattle)//next turn
 	{
 		selected_guy = unselect(selected_guy);
 		switch (BattleCondition)
@@ -102,5 +102,5 @@ else if (CurrentTurn == 1) // Enemy turn
 }
 
 
-depth = -y;
+depth = -room_height-100;
 
