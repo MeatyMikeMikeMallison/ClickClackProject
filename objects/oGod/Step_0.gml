@@ -20,7 +20,7 @@ if (CurrentTurn == 0) // Player turn
 				selected_guy = collision_point(mouse_x, mouse_y, pUnit, true, false);
 				with (selected_guy)
 				{
-					InfoCheck = true
+					InfoCheck = true;
 					Selected = true;
 					if (!HasMoved) HighlightHex(2,Movement,Range,Team);
 					else if (!HasAttacked) HighlightHex(1,0,Range,Team);
@@ -41,11 +41,12 @@ if (CurrentTurn == 0) // Player turn
 						y = obj.y;
 						HasMoved = true;
 					}
-					
-					other.selected_guy = unselect(selected_guy);
+					HighlightHex(0,Movement,Range,Team);
+					Selected = false;
+					InfoCheck = false;
+					other.selected_guy = noone;
 				}
 			}
-		
 		}
 		else selected_guy = unselect(selected_guy); // Unsellect guy
 	}
