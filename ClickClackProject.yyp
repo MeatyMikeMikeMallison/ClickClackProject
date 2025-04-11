@@ -70,7 +70,6 @@
     {"id":{"name":"HighlightHex","path":"scripts/HighlightHex/HighlightHex.yy",},},
     {"id":{"name":"nextTurn","path":"scripts/nextTurn/nextTurn.yy",},},
     {"id":{"name":"unselect","path":"scripts/unselect/unselect.yy",},},
-    {"id":{"name":"Sequence1","path":"sequences/Sequence1/Sequence1.yy",},},
     {"id":{"name":"sBackgroundBattle","path":"sprites/sBackgroundBattle/sBackgroundBattle.yy",},},
     {"id":{"name":"sDefeat","path":"sprites/sDefeat/sDefeat.yy",},},
     {"id":{"name":"sENDOFALPHA","path":"sprites/sENDOFALPHA/sENDOFALPHA.yy",},},
