@@ -4,7 +4,12 @@
   "eventList":[],
   "managed":true,
   "name":"oPlayerMedium",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"IdleSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sGuy","path":"sprites/sGuy/sGuy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sGuy",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"ActionSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sBattleActorAttacker","path":"sprites/sBattleActorAttacker/sBattleActorAttacker.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sBattleActorAttacker",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"WalkSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sGuy_Sellected","path":"sprites/sGuy_Sellected/sGuy_Sellected.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sGuy_Sellected",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"HurtSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"sBattleActorDefender","path":"sprites/sBattleActorDefender/sBattleActorDefender.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sBattleActorDefender",},
+  ],
   "parent":{
     "name":"Units",
     "path":"folders/Objects/Units.yy",
