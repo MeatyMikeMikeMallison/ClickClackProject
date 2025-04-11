@@ -67,7 +67,7 @@
     ],
     "top":0,
   },
-  "origin":9,
+  "origin":4,
   "parent":{
     "name":"importedGuys",
     "path":"folders/Sprites/Guys/importedGuys.yy",
@@ -195,7 +195,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":50,
-    "yorigin":71,
+    "yorigin":50,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
