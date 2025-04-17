@@ -2,10 +2,10 @@
   "$GMSprite":"",
   "%Name":"Spr_EnemyLight_Selected",
   "bboxMode":0,
-  "bbox_bottom":74,
-  "bbox_left":28,
-  "bbox_right":44,
-  "bbox_top":53,
+  "bbox_bottom":76,
+  "bbox_left":26,
+  "bbox_right":45,
+  "bbox_top":51,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -22,6 +22,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"11395df6-cb0d-49d9-abed-a16dbdb05ead","blendMode":0,"displayName":"default","isLocked":false,"name":"11395df6-cb0d-49d9-abed-a16dbdb05ead","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"dc62983a-2679-41e9-a294-acf9849c7116","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"dc62983a-2679-41e9-a294-acf9849c7116","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"Spr_EnemyLight_Selected",
   "nineSlice":{

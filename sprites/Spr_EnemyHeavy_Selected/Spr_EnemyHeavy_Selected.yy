@@ -2,10 +2,10 @@
   "$GMSprite":"",
   "%Name":"Spr_EnemyHeavy_Selected",
   "bboxMode":0,
-  "bbox_bottom":84,
-  "bbox_left":21,
-  "bbox_right":44,
-  "bbox_top":50,
+  "bbox_bottom":86,
+  "bbox_left":19,
+  "bbox_right":47,
+  "bbox_top":48,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -21,6 +21,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"aabf128d-dace-4ce6-9200-35cf27b456b8","blendMode":0,"displayName":"default","isLocked":false,"name":"aabf128d-dace-4ce6-9200-35cf27b456b8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"a6f396db-4a71-4eba-8409-eee2cdc18a87","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"a6f396db-4a71-4eba-8409-eee2cdc18a87","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"Spr_EnemyHeavy_Selected",
   "nineSlice":{
