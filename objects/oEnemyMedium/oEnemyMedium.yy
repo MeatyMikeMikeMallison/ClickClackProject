@@ -5,10 +5,10 @@
   "managed":true,
   "name":"oEnemyMedium",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"IdleSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_other","path":"sprites/Spr_other/Spr_other.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_other",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"ActionSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_otherATK","path":"sprites/Spr_otherATK/Spr_otherATK.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_otherATK",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"WalkSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_other","path":"sprites/Spr_other/Spr_other.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_other",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"HurtSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_other","path":"sprites/Spr_other/Spr_other.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_other",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"IdleSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_EnemyMedium","path":"sprites/Spr_EnemyMedium/Spr_EnemyMedium.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_other",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"ActionSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_EnemyMediumATK","path":"sprites/Spr_EnemyMediumATK/Spr_EnemyMediumATK.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_otherATK",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"WalkSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_EnemyMedium","path":"sprites/Spr_EnemyMedium/Spr_EnemyMedium.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_other",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"HurtSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_EnemyMedium","path":"sprites/Spr_EnemyMedium/Spr_EnemyMedium.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_other",},
   ],
   "parent":{
     "name":"Units",
