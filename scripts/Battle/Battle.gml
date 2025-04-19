@@ -13,7 +13,8 @@ function Battle(Attacker,Defender)
 	B2RAD // <2 Range Attacker Dies 
 	B2RAH // <2 Range Attacker Hurts*/
 	var Outcome = BATTLE_BASE_BORAH;
-
+	var Death = "None";
+	
 	with(Defender)
 	{
 		Health = Health - (Attacker.Attack - Defense);
@@ -30,12 +31,12 @@ function Battle(Attacker,Defender)
 						Health = Health - (Defender.Attack - Defense);
 						if (Health < 1)
 						{
-								if (Attacker.Range == 1)
-								{
-									Outcome = BORAD;
-								}
-								else Outcome = B2RAD;
-							instance_destroy();
+							if (Attacker.Range == 1)
+							{
+								Outcome = BORAD;
+							}
+							else Outcome = B2RAD;
+							Death = "Attacker";
 						}
 						else
 						{
@@ -58,22 +59,31 @@ function Battle(Attacker,Defender)
 				Outcome = BORDD;
 			}
 			else Outcome = B2RDD;
-			instance_destroy();
+			Death = "Defender";
 		}
 	}
-	
+	show_debug_message(string(Outcome));
 	//animation
 	with(oGod)
 	{
 		Attack_IdleActorSprite = Attacker.IdleSprite;
 		Attack_ActionActorSprite = Attacker.ActionSprite;
 		Attack_HitActorSprite = Attacker.HurtSprite;
-		Attack_WalkActorSprite = Attacker.WalkSprite
+		Attack_WalkActorSprite = Attacker.WalkSprite;
+		Attack_DieActorSprite = Attacker.DieSprite;
 		Defense_IdleActorSprite = Defender.IdleSprite;
 		Defense_ActionActorSprite = Defender.ActionSprite;
 		Defense_HitActorSprite = Defender.HurtSprite;
 		Defense_WalkActorSprite = Defender.WalkSprite;
+		Defense_DieActorSprite = Defender.DieSprite;
 		cutscene = layer_sequence_create("AssetsBattle",room_width/2,room_height/2,Outcome);
+		//with (oGod) alarm_set(0,10);
 	}
 	show_debug_message("Done 1");
+	
+	if (Death != "None")
+	{
+		if (Death == "Attacker") instance_destroy(Attacker);
+		if (Death == "Defender") instance_destroy(Defender);
+	}
 }

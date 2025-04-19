@@ -36,8 +36,10 @@ Attack_IdleActorSprite = noone;
 Attack_ActionActorSprite = noone;
 Attack_HitActorSprite = noone;
 Attack_WalkActorSprite = noone;
+Attack_DieActorSprite = noone;
 //Defense
 Defense_IdleActorSprite = noone;
 Defense_ActionActorSprite = noone;
 Defense_HitActorSprite = noone;
 Defense_WalkActorSprite = noone;
+Defense__DieActorSprite = noone;
