@@ -1,11 +1,19 @@
 {
   "$GMSprite":"",
   "%Name":"Spr_Light1",
+<<<<<<< HEAD
   "bboxMode":2,
   "bbox_bottom":63,
   "bbox_left":32,
   "bbox_right":63,
   "bbox_top":32,
+=======
+  "bboxMode":0,
+  "bbox_bottom":73,
+  "bbox_left":28,
+  "bbox_right":47,
+  "bbox_top":50,
+>>>>>>> parent of 12c7f17 (All Sprites)
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
