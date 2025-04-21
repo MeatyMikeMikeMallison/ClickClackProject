@@ -105,6 +105,7 @@
     {"id":{"name":"sHexagon_Test","path":"sprites/sHexagon_Test/sHexagon_Test.yy",},},
     {"id":{"name":"sHexagon_TestCollison","path":"sprites/sHexagon_TestCollison/sHexagon_TestCollison.yy",},},
     {"id":{"name":"sHexagon","path":"sprites/sHexagon/sHexagon.yy",},},
+    {"id":{"name":"sHexagonAgal","path":"sprites/sHexagonAgal/sHexagonAgal.yy",},},
     {"id":{"name":"sHexagonTest","path":"sprites/sHexagonTest/sHexagonTest.yy",},},
     {"id":{"name":"sInfoSquare","path":"sprites/sInfoSquare/sInfoSquare.yy",},},
     {"id":{"name":"sOtherGuy_Light","path":"sprites/sOtherGuy_Light/sOtherGuy_Light.yy",},},
