@@ -7,12 +7,16 @@ function nextTurn()
 		other.CurrentTurn = 0;
 	}
 	else other.CurrentTurn++;
+	other.numberSelected = 0;
+	other.BattleButton = false;
 	
 	with (pUnit)
 	{
 		HasMoved = false;
 		HasAttacked = false;
 		Selected = false;
+		InfoCheck = false;
+		SecondInfo = false;
 	}
 	
 	if (!instance_exists(pPlayerUnit)) BattleCondition = BattleStatus.Defeat;
@@ -22,4 +26,5 @@ function nextTurn()
 	Enemy_Number = Enemy_Number_Max;
 	other.TurnCount++;
 	show_debug_message(Enemy_Number_Max);
+	show_debug_message("////////////////");
 }

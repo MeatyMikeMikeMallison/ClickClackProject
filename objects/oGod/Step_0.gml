@@ -9,22 +9,33 @@ if (CurrentTurn == 0) // Player turn
 			{
 				with (selected_guy)
 				{
-					HasAttacked = true;
+					with (collision_point(mouse_x, mouse_y, pUnit, true, false))
+					{
+						InfoCheck = true;
+						if(oGod.numberSelected == 1) SecondInfo = true;
+					}
+					oGod.BattleButton = true;
 					oGod.PlayerBattle = true;
-					Battle(self, collision_point(mouse_x, mouse_y, pUnit, true, false));
+					with (instance_create_layer(room_width/2,room_height-200,"Instances_1",oFightButton))
+					{
+						AttackerButton = other;
+						DefenderButton = collision_point(mouse_x, mouse_y, pUnit, true, false);
+					}
 				}
 			}
 			else
 			{
-				selected_guy = unselect(selected_guy);
+				selected_guy = unselect(selected_guy,true);
 				selected_guy = collision_point(mouse_x, mouse_y, pUnit, true, false);
 				with (selected_guy)
 				{
 					InfoCheck = true;
+					if(other.numberSelected == 1) SecondInfo = true;
 					Selected = true;
 					if (!HasMoved) HighlightHex(2,Movement,Range,Team);
 					else if (!HasAttacked) HighlightHex(1,0,Range,Team);
 				}
+				numberSelected++;
 			}
 		}
 		else if (collision_point(mouse_x, mouse_y, oHexTest, true, false) && selected_guy != noone) //Moving guy to Hex
@@ -41,19 +52,27 @@ if (CurrentTurn == 0) // Player turn
 						y = obj.y;
 						HasMoved = true;
 					}
-					HighlightHex(0,Movement,Range,Team);
-					Selected = false;
-					InfoCheck = false;
-					other.selected_guy = noone;
 				}
+				HighlightHex(0,Movement,Range,Team);
+				other.selected_guy = unselect(other.selected_guy,false);
+				other.numberSelected = 0;
 			}
 		}
-		else selected_guy = unselect(selected_guy); // Unsellect guy
+		else selected_guy = unselect(selected_guy,false); // Unsellect guy
+	}
+	else if (PlayerBattle && BattleButton)
+	{
+		if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x,mouse_y,oFightButton))
+		{
+			PlayerBattle = false;
+			BattleButton = false;
+			selected_guy = unselect(selected_guy,false);
+		}
 	}
 	
 	if (mouse_check_button_pressed(mb_right) && !PlayerBattle)//next turn
 	{
-		selected_guy = unselect(selected_guy);
+		selected_guy = unselect(selected_guy,false);
 		switch (BattleCondition)
 		{
 			case BattleStatus.Victory:

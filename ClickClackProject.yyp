@@ -44,6 +44,7 @@
   },
   "name":"ClickClackProject",
   "resources":[
+    {"id":{"name":"fnt_Basic","path":"fonts/fnt_Basic/fnt_Basic.yy",},},
     {"id":{"name":"fnt_extras","path":"fonts/fnt_extras/fnt_extras.yy",},},
     {"id":{"name":"oAttackerActor","path":"objects/oAttackerActor/oAttackerActor.yy",},},
     {"id":{"name":"obj_credits","path":"objects/obj_credits/obj_credits.yy",},},
@@ -53,6 +54,7 @@
     {"id":{"name":"oDefenderActor","path":"objects/oDefenderActor/oDefenderActor.yy",},},
     {"id":{"name":"oEnemyLight","path":"objects/oEnemyLight/oEnemyLight.yy",},},
     {"id":{"name":"oEnemyMedium","path":"objects/oEnemyMedium/oEnemyMedium.yy",},},
+    {"id":{"name":"oFightButton","path":"objects/oFightButton/oFightButton.yy",},},
     {"id":{"name":"oGod","path":"objects/oGod/oGod.yy",},},
     {"id":{"name":"oHexagon","path":"objects/oHexagon/oHexagon.yy",},},
     {"id":{"name":"oHexaTester","path":"objects/oHexaTester/oHexaTester.yy",},},
@@ -87,6 +89,7 @@
     {"id":{"name":"sBattleActorDefender","path":"sprites/sBattleActorDefender/sBattleActorDefender.yy",},},
     {"id":{"name":"sDefeat","path":"sprites/sDefeat/sDefeat.yy",},},
     {"id":{"name":"sENDOFALPHA","path":"sprites/sENDOFALPHA/sENDOFALPHA.yy",},},
+    {"id":{"name":"sFightButton","path":"sprites/sFightButton/sFightButton.yy",},},
     {"id":{"name":"sGuy_Light","path":"sprites/sGuy_Light/sGuy_Light.yy",},},
     {"id":{"name":"sGuy_Sellected_Light","path":"sprites/sGuy_Sellected_Light/sGuy_Sellected_Light.yy",},},
     {"id":{"name":"sGuy_Sellected","path":"sprites/sGuy_Sellected/sGuy_Sellected.yy",},},

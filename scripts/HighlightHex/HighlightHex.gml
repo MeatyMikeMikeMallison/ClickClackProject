@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function HighlightHex(Highlight,Movement,Range,Team)
 {
-	show_debug_message("HexGate");
+	//show_debug_message("HexGate");
 	if (Highlight == 0)
 	{
 		with (oHexTest)
@@ -10,7 +10,7 @@ function HighlightHex(Highlight,Movement,Range,Team)
 			HexSelection = sHexagon_Test;
 			HexHighlightSellect = false;
 		}
-		show_debug_message("breakout");
+		//show_debug_message("breakout");
 		exit;
 	}
 	instance_create_layer(x,y,"Instances_1",oHexaTester);

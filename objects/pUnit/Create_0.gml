@@ -10,3 +10,5 @@ sprite_index = BaseSprite;
 Health = MaxHealth;
 
 InfoBase = 100;
+SecondInfo = false;
+//InfoBase = 1092;

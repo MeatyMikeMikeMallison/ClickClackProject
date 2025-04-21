@@ -2,6 +2,8 @@
 selected_guy = noone;
 cutscene = 0;
 PlayerBattle = false;
+numberSelected = 0;
+BattleButton = false;
 
 //Turn Count
 TurnCount = 1;

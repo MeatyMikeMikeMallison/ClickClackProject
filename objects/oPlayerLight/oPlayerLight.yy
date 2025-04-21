@@ -18,6 +18,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"ActionSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_Light1ATK","path":"sprites/Spr_Light1ATK/Spr_Light1ATK.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_Light1ATK",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"WalkSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_Light1_walk","path":"sprites/Spr_Light1_walk/Spr_Light1_walk.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_Light1_walk",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"DieSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_Light1Die","path":"sprites/Spr_Light1Die/Spr_Light1Die.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_Light1Die",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"PortaitSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_Light1_Actor","path":"sprites/Spr_Light1_Actor/Spr_Light1_Actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_Light1_Actor",},
   ],
   "parent":{
     "name":"Units",

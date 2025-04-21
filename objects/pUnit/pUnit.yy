@@ -43,6 +43,7 @@
     {"$GMObjectProperty":"v1","%Name":"WalkSprite","filters":[],"listItems":[],"multiselect":false,"name":"WalkSprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"HurtSprite","filters":[],"listItems":[],"multiselect":false,"name":"HurtSprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"DieSprite","filters":[],"listItems":[],"multiselect":false,"name":"DieSprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"PortaitSprite","filters":[],"listItems":[],"multiselect":false,"name":"PortaitSprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

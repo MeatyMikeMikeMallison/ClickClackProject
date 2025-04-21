@@ -18,6 +18,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"WalkSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_EnemyLight_walk","path":"sprites/Spr_EnemyLight_walk/Spr_EnemyLight_walk.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_EnemyLight_walk",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"HurtSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_EnemyLightHit","path":"sprites/Spr_EnemyLightHit/Spr_EnemyLightHit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_EnemyLightHit",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"DieSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_EnemyLightDie","path":"sprites/Spr_EnemyLightDie/Spr_EnemyLightDie.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_EnemyLightDie",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"PortaitSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_EnemyLight_Actor","path":"sprites/Spr_EnemyLight_Actor/Spr_EnemyLight_Actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_EnemyLight_Actor",},
   ],
   "parent":{
     "name":"Units",
