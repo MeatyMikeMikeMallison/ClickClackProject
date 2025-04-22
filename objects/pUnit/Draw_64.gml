@@ -3,11 +3,14 @@
 if (SecondInfo) InfoBase = 1092;
 else InfoBase = 100;
 
+if (Health <= round(MaxHealth/2)) PortCheck = 1;
+if (Health <= round(MaxHealth/4)) PortCheck = 2;
+
 if (InfoCheck)
 {
 	draw_set_font(fnt_Basic);
 	draw_sprite(sInfoSquare,0,InfoBase-100,0);
-	draw_sprite_ext(PortaitSprite,0,InfoBase+10,115,(sign(InfoBase-1091))*0.5,0.5,0,-1,1);
+	draw_sprite_ext(PortaitSprite,PortCheck,InfoBase+10,115,(sign(InfoBase-1091))*0.5,0.5,0,-1,1);
 	draw_text(InfoBase+110,100,"Hp:" + string(Health)+"/"+string(MaxHealth));
 	draw_text(InfoBase+110,130,"Speed:" + string(Movement));
 	draw_text(InfoBase+110,155,"Range:" + string(Range));
