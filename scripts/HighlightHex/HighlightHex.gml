@@ -7,7 +7,7 @@ function HighlightHex(Highlight,Movement,Range,Team)
 	{
 		with (oHexTest)
 		{
-			HexSelection = sHexagon_Test;
+			HexSelection = sHexagon_Grass;
 			HexHighlightSellect = false;
 		}
 		//show_debug_message("breakout");
@@ -35,19 +35,19 @@ function HighlightHex(Highlight,Movement,Range,Team)
 								case 2: 
 									if (!place_meeting(x,y,pUnit))
 									{
-										HexSelection = sHexagon_Test_Sellect;
+										HexSelection = sHexagon_Grass_Select;
 										instance_create_layer(x,y,"Instances_1",oHexaTester);
 									}
 								break;
 								case 1:
-									if (HexSelection != sHexagon_Test_Sellect)
+									if (HexSelection != sHexagon_Grass_Select)
 									{
-										HexSelection = sHexagon_Test_Damage;
+										HexSelection = sHexagon_Grass_Damage;
 										instance_create_layer(x,y,"Instances_1",oHexaTester);
 									}
 								break;
 								case 0:
-									HexSelection = sHexagon_Test;
+									HexSelection = sHexagon_Grass;
 									instance_create_layer(x,y,"Instances_1",oHexaTester);
 								break;
 							}
@@ -65,5 +65,5 @@ function HighlightHex(Highlight,Movement,Range,Team)
 	}
 	with (oHexTest) HexHighlightSellect = false;
 	instance_destroy(oHexaTester);
-	if (Highlight != 0 && !HasMoved) collision_point(x,y,oHexTest,false,true).HexSelection = sHexagon_Test_Sellect;
+	if (Highlight != 0 && !HasMoved) collision_point(x,y,oHexTest,false,true).HexSelection = sHexagon_Grass_Select;
 }

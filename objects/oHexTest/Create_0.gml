@@ -1,1 +1,1 @@
-HexSelection = sHexagon_Test;
+HexSelection = sHexagon_Grass;

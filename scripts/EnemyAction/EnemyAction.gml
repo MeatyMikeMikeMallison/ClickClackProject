@@ -46,7 +46,9 @@ function EnemyAction(Me)
 			var obj = _TargetFinalList[| 0];
 			Me.x = obj.x;
 			Me.y = obj.y;
-			
+			Me.InfoCheck = true;
+			Target.SecondInfo = true;
+			Target.InfoCheck = true;
 			Battle(Me,Target);
 		}
 	}

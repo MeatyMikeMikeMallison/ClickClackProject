@@ -45,7 +45,7 @@ if (CurrentTurn == 0) // Player turn
 			{
 				if (!place_meeting(obj.x,obj.y,pUnit))
 				{
-					if ((!HasMoved)  && obj.HexSelection == sHexagon_Test_Sellect && Team == other.CurrentTurn)
+					if ((!HasMoved)  && obj.HexSelection == sHexagon_Grass_Select && Team == other.CurrentTurn)
 					{
 						HighlightHex(0,Movement,Range,Team);
 						x = obj.x;
