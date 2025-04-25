@@ -19,6 +19,7 @@ function unselect(SelectedGuy,SecondGuy)
 				numberSelected = 0;
 			}
 		oGod.BattleButton = false;
+		oGod.Confirm_End_Turn = false;
 		SelectedGuy = noone;
 		//show_debug_message("unselect");
 		}

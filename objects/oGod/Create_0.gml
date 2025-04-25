@@ -4,6 +4,7 @@ cutscene = 0;
 PlayerBattle = false;
 numberSelected = 0;
 BattleButton = false;
+Confirm_End_Turn = false;
 
 //Turn Count
 TurnCount = 1;

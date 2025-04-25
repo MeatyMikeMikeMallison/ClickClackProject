@@ -2,13 +2,25 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function nextTurn()
 {
-	if (other.CurrentTurn+1 == 2)
+	if (oGod.CurrentTurn+1 == 2)
 	{
-		other.CurrentTurn = 0;
+		oGod.CurrentTurn = 0;
 	}
-	else other.CurrentTurn++;
-	other.numberSelected = 0;
-	other.BattleButton = false;
+	else oGod.CurrentTurn++;
+	oGod.numberSelected = 0;
+	oGod.BattleButton = false;
+	oGod.Confirm_End_Turn = false;
+	
+	if (oGod.CurrentTurn == 0)
+	{
+		with (pPlayerUnit) InfoBase = 100;
+		with (pEnemyUnit ) InfoBase = browser_width-478;
+	}
+	else if (oGod.CurrentTurn == 1)
+	{
+		with (pPlayerUnit) InfoBase = browser_width-478;
+		with (pEnemyUnit ) InfoBase = 100;
+	}
 	
 	with (pUnit)
 	{
@@ -24,7 +36,7 @@ function nextTurn()
 	
 	Enemy_Number_Max = instance_number(pEnemyUnit);
 	Enemy_Number = Enemy_Number_Max;
-	other.TurnCount++;
+	oGod.TurnCount++;
 	show_debug_message(Enemy_Number_Max);
 	show_debug_message("////////////////");
 }

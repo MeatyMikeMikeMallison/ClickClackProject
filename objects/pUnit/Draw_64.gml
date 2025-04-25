@@ -1,7 +1,7 @@
 /// @description Debug and Info
 //if Selected draw_sprite_ext(sHexagonTest,0,x,y,Movement,Movement,0,c_white,1);
-if (SecondInfo) InfoBase = 1092;
-else InfoBase = 100;
+/*if (SecondInfo) InfoBase = 1092;
+else InfoBase = 100;*/
 
 if (Health <= round(MaxHealth/2)) PortCheck = 1;
 if (Health <= round(MaxHealth/4)) PortCheck = 2;

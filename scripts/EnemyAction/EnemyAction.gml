@@ -47,7 +47,7 @@ function EnemyAction(Me)
 			Me.x = obj.x;
 			Me.y = obj.y;
 			Me.InfoCheck = true;
-			Target.SecondInfo = true;
+			Me.SecondInfo = true;
 			Target.InfoCheck = true;
 			Battle(Me,Target);
 		}
@@ -57,7 +57,7 @@ function EnemyAction(Me)
 	else if (!Fight)
 	{
 		Retreat(Me);
-		with (oGod) alarm_set(0,10);
+		with (oGod) alarm_set(0,30);
 	}
 	
 	//Cleanup

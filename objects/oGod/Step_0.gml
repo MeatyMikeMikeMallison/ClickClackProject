@@ -25,12 +25,13 @@ if (CurrentTurn == 0) // Player turn
 			}
 			else
 			{
+				var Old_Selected_Guy = selected_guy;
 				selected_guy = unselect(selected_guy,true);
 				selected_guy = collision_point(mouse_x, mouse_y, pUnit, true, false);
 				with (selected_guy)
 				{
 					InfoCheck = true;
-					if(other.numberSelected == 1) SecondInfo = true;
+					if(other.numberSelected == 1 && Old_Selected_Guy.Team != Team) SecondInfo = true;
 					Selected = true;
 					if (!HasMoved) HighlightHex(2,Movement,Range,Team);
 					else if (!HasAttacked) HighlightHex(1,0,Range,Team);
@@ -70,7 +71,7 @@ if (CurrentTurn == 0) // Player turn
 		}
 	}
 	
-	if (mouse_check_button_pressed(mb_right) && !PlayerBattle)//next turn
+	/*if (mouse_check_button_pressed(mb_right) && !PlayerBattle)//next turn
 	{
 		selected_guy = unselect(selected_guy,false);
 		switch (BattleCondition)
@@ -85,7 +86,7 @@ if (CurrentTurn == 0) // Player turn
 				break;
 		}
 		nextTurn();
-	}
+	}*/
 }
 else if (CurrentTurn == 1) // Enemy turn
 {
