@@ -9,7 +9,6 @@ PortCheck = 0;
 Health = MaxHealth;
 
 InfoBase = 100;
-SecondInfo = false;
 //InfoBase = 1092;
 
 //fully xscale manover

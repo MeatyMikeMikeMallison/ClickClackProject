@@ -7,7 +7,6 @@ function nextTurn()
 		oGod.CurrentTurn = 0;
 	}
 	else oGod.CurrentTurn++;
-	oGod.numberSelected = 0;
 	oGod.BattleButton = false;
 	oGod.Confirm_End_Turn = false;
 	
@@ -28,7 +27,6 @@ function nextTurn()
 		HasAttacked = false;
 		Selected = false;
 		InfoCheck = false;
-		SecondInfo = false;
 	}
 	
 	if (!instance_exists(pPlayerUnit)) BattleCondition = BattleStatus.Defeat;

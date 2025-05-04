@@ -12,7 +12,6 @@ if (CurrentTurn == 0) // Player turn
 					with (collision_point(mouse_x, mouse_y, pUnit, true, false))
 					{
 						InfoCheck = true;
-						if(oGod.numberSelected == 1) SecondInfo = true;
 					}
 					oGod.BattleButton = true;
 					oGod.PlayerBattle = true;
@@ -25,18 +24,15 @@ if (CurrentTurn == 0) // Player turn
 			}
 			else
 			{
-				var Old_Selected_Guy = selected_guy;
-				selected_guy = unselect(selected_guy,true);
+				selected_guy = unselect(selected_guy, collision_point(mouse_x, mouse_y, pUnit, true, false));
 				selected_guy = collision_point(mouse_x, mouse_y, pUnit, true, false);
 				with (selected_guy)
 				{
 					InfoCheck = true;
-					if(other.numberSelected == 1 && Old_Selected_Guy.Team != Team) SecondInfo = true;
 					Selected = true;
 					if (!HasMoved) HighlightHex(2,Movement,Range,Team);
 					else if (!HasAttacked) HighlightHex(1,0,Range,Team);
 				}
-				numberSelected++;
 			}
 		}
 		else if (collision_point(mouse_x, mouse_y, oHexTest, true, false) && selected_guy != noone) //Moving guy to Hex
@@ -55,11 +51,10 @@ if (CurrentTurn == 0) // Player turn
 					}
 				}
 				HighlightHex(0,Movement,Range,Team);
-				other.selected_guy = unselect(other.selected_guy,false);
-				other.numberSelected = 0;
+				other.selected_guy = unselect(other.selected_guy,other.selected_guy);
 			}
 		}
-		else selected_guy = unselect(selected_guy,false); // Unsellect guy
+		else selected_guy = unselect(selected_guy,selected_guy); // Unsellect guy
 	}
 	else if (PlayerBattle && BattleButton)
 	{
@@ -67,7 +62,7 @@ if (CurrentTurn == 0) // Player turn
 		{
 			PlayerBattle = false;
 			BattleButton = false;
-			selected_guy = unselect(selected_guy,false);
+			selected_guy = unselect(selected_guy,selected_guy);
 		}
 	}
 	

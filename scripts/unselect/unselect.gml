@@ -1,27 +1,24 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function unselect(SelectedGuy,SecondGuy)
+function unselect(SelectedGuy,OtherTeam)
 {
-	if (SelectedGuy != noone)
+	if (SelectedGuy != noone && OtherTeam != noone)
+	{
+		if (OtherTeam.Team == SelectedGuy.Team)
 		{
-			with (SelectedGuy)
-			{
-				HighlightHex(0,Movement,Range,Team);
-				Selected = false;
-			}
-			if (!SecondGuy || oGod.numberSelected > 1)
-			{
-				with (pUnit)
-				{
-					InfoCheck = false;
-					SecondInfo = false;
-				}
-				numberSelected = 0;
-			}
+			with (pUnit) InfoCheck = false;
+		}
+		
+		with (SelectedGuy)
+		{
+			HighlightHex(0,Movement,Range,Team);
+			Selected = false;
+		}
+		
 		oGod.BattleButton = false;
 		oGod.Confirm_End_Turn = false;
 		SelectedGuy = noone;
 		//show_debug_message("unselect");
-		}
+	}
 	return SelectedGuy;
 }
