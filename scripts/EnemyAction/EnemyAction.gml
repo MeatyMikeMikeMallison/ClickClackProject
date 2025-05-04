@@ -93,7 +93,7 @@ function FindPlayerHexes(Me, targetPlayerList)
 							{
 								ds_list_add(targetPlayerList, self);
 							}
-							else instance_create_layer(hexInstance.x,hexInstance.y,"Instances_1",oHexaTester);
+							else if !place_meeting(x,y,pEnemyUnit) instance_create_layer(hexInstance.x,hexInstance.y,"Instances_1",oHexaTester);
 						}
 					}
 
