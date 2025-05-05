@@ -29,8 +29,24 @@ function nextTurn()
 		InfoCheck = false;
 	}
 	
-	if (!instance_exists(pPlayerUnit)) BattleCondition = BattleStatus.Defeat;
-	else if (!instance_exists(pEnemyUnit)) BattleCondition = BattleStatus.Victory;
+	if (!instance_exists(pPlayerUnit))
+	{
+		BattleCondition = BattleStatus.Defeat;
+		if (audio_is_playing(oMUSICMAN.SoundToPlay))
+		{
+			audio_stop_sound(oMUSICMAN.SoundToPlay);
+			audio_play_sound(snDefeat,10,true);
+		}
+	}
+	else if (!instance_exists(pEnemyUnit))
+	{
+		BattleCondition = BattleStatus.Victory;
+		if (audio_is_playing(oMUSICMAN.SoundToPlay))
+		{
+			audio_stop_sound(oMUSICMAN.SoundToPlay);
+			audio_play_sound(snVictory,10,true);
+		}
+	}
 	
 	Enemy_Number_Max = instance_number(pEnemyUnit);
 	Enemy_Number = Enemy_Number_Max;

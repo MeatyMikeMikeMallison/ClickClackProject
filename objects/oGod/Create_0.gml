@@ -39,9 +39,11 @@ Attack_ActionActorSprite = noone;
 Attack_HitActorSprite = noone;
 Attack_WalkActorSprite = noone;
 Attack_DieActorSprite = noone;
+Attack_UnitTypeSprite = "";
 //Defense
 Defense_IdleActorSprite = noone;
 Defense_ActionActorSprite = noone;
 Defense_HitActorSprite = noone;
 Defense_WalkActorSprite = noone;
-Defense__DieActorSprite = noone;
+Defense_DieActorSprite = noone;
+Defense_UnitTypeSprite = "";

@@ -47,6 +47,7 @@ if (CurrentTurn == 0) // Player turn
 						HighlightHex(0,Movement,Range,Team);
 						x = obj.x;
 						y = obj.y;
+						audio_play_sound(snFootstep,0,false);
 						HasMoved = true;
 					}
 				}

@@ -4,7 +4,7 @@ function unselect(SelectedGuy,OtherTeam)
 {
 	if (SelectedGuy != noone && OtherTeam != noone)
 	{
-		show_debug_message(SelectedGuy);
+		audio_play_sound(snCancleSel,0,false);
 		
 		if (OtherTeam.Team == SelectedGuy.Team)
 		{

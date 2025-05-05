@@ -231,6 +231,7 @@ function Retreat (Me)
 				var obj = _TempList[| 0];
 				other.x = obj.x;
 				other.y = obj.y;
+				audio_play_sound(snFootstep,0,false);
 				ds_list_destroy(_list);
 				ds_list_destroy(_TempList);
 			}

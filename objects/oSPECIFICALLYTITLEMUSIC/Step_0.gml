@@ -1,0 +1,1 @@
+if (!audio_is_playing(snTitle)) audio_play_sound(snTitle,10,true,0.5);

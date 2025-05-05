@@ -40,11 +40,11 @@ function Battle(Attacker,Defender)
 						}
 						else
 						{
-							if (Attacker.Range == 1)
+							if (Attacker.Range == 2 && Defender.Range == 2)
 							{
-								Outcome = BORAH;
+								Outcome = B2RAH;
 							}
-							else Outcome = B2RAH;
+							else Outcome = BORAH;
 						}
 					}
 				}
@@ -71,11 +71,13 @@ function Battle(Attacker,Defender)
 		Attack_HitActorSprite = Attacker.HurtSprite;
 		Attack_WalkActorSprite = Attacker.WalkSprite;
 		Attack_DieActorSprite = Attacker.DieSprite;
+		Attack_UnitTypeSprite = Attacker.UnitType;
 		Defense_IdleActorSprite = Defender.IdleSprite;
 		Defense_ActionActorSprite = Defender.ActionSprite;
 		Defense_HitActorSprite = Defender.HurtSprite;
 		Defense_WalkActorSprite = Defender.WalkSprite;
 		Defense_DieActorSprite = Defender.DieSprite;
+		Defense_UnitTypeSprite = Defender.UnitType;
 		cutscene = layer_sequence_create("AssetsBattle",room_width/2,room_height/2,Outcome);
 		//with (oGod) alarm_set(0,10);
 	}
