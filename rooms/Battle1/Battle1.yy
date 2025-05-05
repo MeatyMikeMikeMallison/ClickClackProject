@@ -138,6 +138,8 @@
     {"name":"inst_A7A1FD9","path":"rooms/Battle1/Battle1.yy",},
     {"name":"inst_220029D8","path":"rooms/Battle1/Battle1.yy",},
     {"name":"inst_2836C48D","path":"rooms/Battle1/Battle1.yy",},
+    {"name":"inst_607AE2C7","path":"rooms/Battle1/Battle1.yy",},
+    {"name":"inst_529CD3F5","path":"rooms/Battle1/Battle1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -170,6 +172,10 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"PortaitSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_Medium2_Actor","path":"sprites/Spr_Medium2_Actor/Spr_Medium2_Actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_Medium2_Actor",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":720.0,"y":588.0,},
         {"$GMRInstance":"v1","%Name":"inst_220029D8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_220029D8","objectId":{"name":"oPlayerLight","path":"objects/oPlayerLight/oPlayerLight.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":612.0,},
+        {"$GMRInstance":"v1","%Name":"inst_607AE2C7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_607AE2C7","objectId":{"name":"oPlayerMedium","path":"objects/oPlayerMedium/oPlayerMedium.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"MaxHealth","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":420.0,},
+        {"$GMRInstance":"v1","%Name":"inst_529CD3F5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_529CD3F5","objectId":{"name":"oEnemyMedium","path":"objects/oEnemyMedium/oEnemyMedium.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":372.0,},
       ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[],"depth":-400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":-300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":12,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

@@ -13,6 +13,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"BaseSprite_Sellected","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_Medium1_Selected","path":"sprites/Spr_Medium1_Selected/Spr_Medium1_Selected.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_Medium1_Selected",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"DieSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_Medium1Die","path":"sprites/Spr_Medium1Die/Spr_Medium1Die.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_Medium1Die",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"PortaitSprite","path":"objects/pUnit/pUnit.yy",},"resource":{"name":"Spr_Medium1_Actor","path":"sprites/Spr_Medium1_Actor/Spr_Medium1_Actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spr_Medium1_Actor",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pUnit","path":"objects/pUnit/pUnit.yy",},"propertyId":{"name":"Attack","path":"objects/pUnit/pUnit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"4",},
   ],
   "parent":{
     "name":"Units",

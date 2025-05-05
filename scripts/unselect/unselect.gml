@@ -4,6 +4,8 @@ function unselect(SelectedGuy,OtherTeam)
 {
 	if (SelectedGuy != noone && OtherTeam != noone)
 	{
+		show_debug_message(SelectedGuy);
+		
 		if (OtherTeam.Team == SelectedGuy.Team)
 		{
 			with (pUnit) InfoCheck = false;
@@ -17,8 +19,8 @@ function unselect(SelectedGuy,OtherTeam)
 		
 		oGod.BattleButton = false;
 		oGod.Confirm_End_Turn = false;
-		SelectedGuy = noone;
 		//show_debug_message("unselect");
+		SelectedGuy = noone;
 	}
 	return SelectedGuy;
 }

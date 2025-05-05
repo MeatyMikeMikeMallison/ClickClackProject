@@ -6,7 +6,7 @@ event_inherited();
 
 with (oGod)
 {
-	selected_guy = unselect(selected_guy,false);
+	selected_guy = unselect(selected_guy,selected_guy);
 	switch (BattleCondition)
 	{
 		case BattleStatus.Victory:

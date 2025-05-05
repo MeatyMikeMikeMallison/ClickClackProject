@@ -83,6 +83,8 @@ function Battle(Attacker,Defender)
 	
 	if (Death != "None")
 	{
+		unselect(oGod.selected_guy,oGod.selected_guy);
+		oGod.selected_guy = noone;
 		if (Death == "Attacker") instance_destroy(Attacker);
 		if (Death == "Defender") instance_destroy(Defender);
 	}

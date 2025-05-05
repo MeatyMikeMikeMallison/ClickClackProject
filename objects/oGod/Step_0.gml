@@ -24,7 +24,7 @@ if (CurrentTurn == 0) // Player turn
 			}
 			else
 			{
-				selected_guy = unselect(selected_guy, collision_point(mouse_x, mouse_y, pUnit, true, false));
+				if (selected_guy != noone) selected_guy = unselect(selected_guy, collision_point(mouse_x, mouse_y, pUnit, true, false));
 				selected_guy = collision_point(mouse_x, mouse_y, pUnit, true, false);
 				with (selected_guy)
 				{
@@ -51,10 +51,13 @@ if (CurrentTurn == 0) // Player turn
 					}
 				}
 				HighlightHex(0,Movement,Range,Team);
-				other.selected_guy = unselect(other.selected_guy,other.selected_guy);
+				if (other.selected_guy != noone) other.selected_guy = unselect(other.selected_guy,other.selected_guy);
 			}
 		}
-		else selected_guy = unselect(selected_guy,selected_guy); // Unsellect guy
+		else 
+		{
+			if (selected_guy != noone) selected_guy = unselect(selected_guy,selected_guy); // Unsellect guy
+		}
 	}
 	else if (PlayerBattle && BattleButton)
 	{
@@ -62,7 +65,7 @@ if (CurrentTurn == 0) // Player turn
 		{
 			PlayerBattle = false;
 			BattleButton = false;
-			selected_guy = unselect(selected_guy,selected_guy);
+			if (selected_guy != noone) selected_guy = unselect(selected_guy,selected_guy); 
 		}
 	}
 	
